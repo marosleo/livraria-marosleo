@@ -1,18 +1,20 @@
 from django.db import models
 
+
 class Categoria(models.Model):
-    descricao = models.CharField(max_length=100)
+    descricao = models.CharField(max_length=255)
 
     def __str__(self):
         return self.descricao
 
 
 class Editora(models.Model):
-    nome = models.CharField(max_length=100)
-    site = models.URLField(null=True, blank=True)
+    nome = models.CharField(max_length=200)
+    site = models.URLField()
 
     def __str__(self):
         return self.nome
+
 
 class Autor(models.Model):
     nome = models.CharField(max_length=255)
@@ -27,7 +29,7 @@ class Autor(models.Model):
 
 class Livro(models.Model):
     titulo = models.CharField(max_length=255)
-    isbn = models.CharField(max_length=32, null=True, blank=True)
+    isbn = models.CharField(max_length=32)
     quantidade = models.IntegerField()
     preco = models.DecimalField(max_digits=7, decimal_places=2)
     categoria = models.ForeignKey(
@@ -38,4 +40,4 @@ class Livro(models.Model):
     )
 
     def __str__(self):
-        return f'{self.titulo} ({self.quantidade})'
+        return f"{self.titulo} ({self.quantidade})"
