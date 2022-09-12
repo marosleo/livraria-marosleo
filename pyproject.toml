@@ -2,7 +2,8 @@
 name = "livraria"
 version = "0.1.0"
 description = ""
-authors = ["Marco André Mendes <marcoandre@gmail.com>"]
+authors = ["Bryann Locatelli <bryannlocatelli@gmail.com>"]
+license = "GPL"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -13,8 +14,7 @@ gunicorn = "^20.1.0"
 whitenoise = "^6.2.0"
 
 [tool.poetry.dev-dependencies]
-black = {version = "^22.6.0", allow-prereleases = true}
-isort = "^5.10.1"
+black = {version = "^22.3.0", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
