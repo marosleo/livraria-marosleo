@@ -21,11 +21,13 @@ router.register(r"editoras", EditoraViewSet)
 router.register(r"livros", LivroViewSet)
 
 urlpatterns = [
-    # Admin
-    path("admin/", admin.site.urls),
-    # SimpleJWT - Login
+    # Simple JWT
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    # Admin
+    path("admin/", admin.site.urls),
+    # Upload de imagens e documentos
+    path("api/media/", include(media_router.urls)),
     # OpenAPI 3
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
@@ -38,9 +40,7 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
-    # Media
-    path("api/media/", include(media_router.urls)),
-    # API DRF
+    # API REST
     path("api/", include(router.urls)),
 ]
 
