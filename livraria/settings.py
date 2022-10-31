@@ -17,12 +17,12 @@ DATABASES = {'default': env.db()}
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-$r@-inmu9v8#pwqe7cbto6s)@%e%043c*ju56g1o(x0xbu$i5n"
+#SECRET_KEY = "django-insecure-$r@-inmu9v8#pwqe7cbto6s)@%e%043c*ju56g1o(x0xbu$i5n"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+#ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -76,12 +76,12 @@ WSGI_APPLICATION = "livraria.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
