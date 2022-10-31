@@ -1,3 +1,5 @@
 git config --global user.name "LocatelliBryann"
 
 git config --global user.email "bryannlocatelli@gmail.com"
+
+pa_autoconfigure_django.py --python=3.8 --nuke https://github.com/LocatelliBryann/LivrariaNovo.git
