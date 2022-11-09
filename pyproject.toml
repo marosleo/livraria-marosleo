@@ -2,7 +2,7 @@
 name = "livraria"
 version = "0.1.0"
 description = ""
-authors = ["Bryann Lucas Locatelli <bryannlocatelli@gmail.com>"]
+authors = ["Leonardo Maros <marosleo1990@gmail.com>"]
 license = "GPL"
 
 [tool.poetry.dependencies]
